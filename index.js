@@ -15,10 +15,10 @@ app
   .use(auth)
   .post('/listener', function(req, res) {
     // request body
-    console.log(req.body);
+    console.log(JSON.stringify(req.body));
     // print name
-    console.log(req.body.live);
-    console.log(req.body.notificationItems);
+    //console.log(req.body.live);
+    //console.log(req.body.notificationItems);
 
     res.send("[accepted]");
 })
