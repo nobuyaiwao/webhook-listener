@@ -1,5 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser');
+const auth = require('./auth');
 const path = require('path')
 const PORT = process.env.PORT || 5000
 
@@ -9,7 +10,10 @@ app.use(bodyParser.json());
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
-app.post('/listener', function(req, res) {
+// basic auth
+app
+  .use(auth)
+  .post('/listener', function(req, res) {
     // request body
     console.log(req.body);
     // print name
