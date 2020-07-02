@@ -15,7 +15,7 @@ app
   .use(auth)
   .post('/listener', function(req, res) {
     // request body
-    console.log(JSON.stringify(req.body));
+    console.log(JSON.stringify(req.body,null,"   "));
     // print name
     //console.log(req.body.live);
     //console.log(req.body.notificationItems);
