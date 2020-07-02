@@ -20,7 +20,7 @@ app
     console.log(req.body.live);
     console.log(req.body.notificationItems);
 
-    res.send("[accept]");
+    res.send("[accepted]");
 })
 
 //express()
